@@ -3,15 +3,22 @@
  */
 public class Training {
 
-    public static double calculateArea(double radius) {
-        double result = Math.PI * radius * radius;
-        return result;
+    public static void countup(int n) {
+        if (n == 0) {
+            System.out.println("Blastoff!");
+        } else {
+            countup(n - 1);
+            System.out.println("n="+n);
+            int s=n*n;
+            System.out.println(s);
+
+        }
     }
+
     public static void main(String[] args){
-
-        calculateArea(9);
-
-        System.out.println();
+        int x=2;
+        countup(3);
+        System.out.println("Have a nice day.");
     }
 }
 

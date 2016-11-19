@@ -22,10 +22,16 @@ public class Multadd {
         double  num22=(Math.log(10))/(Math.log(10));//dividing to get log from ln
         double  num33=(Math.log(20))/(Math.log(10));//dividing to get log from ln
         double numout=multAdd(num11,num22,num33);
-        System.out.printf("Answer 6.4.4(2) =%.3f", numout);
+        System.out.printf("Answer 6.4.4(2) =%.3f\n", numout);
+        //testing method expSum output with number 3
+        System.out.printf("Answer 6.4.5 =%.3f\n",expSum(3));
     }
-   // public static double expSum(double parameter){
-
-       // return result2;
-    //}
+    //method for exercise 6.4.5
+    public static double expSum(double parameter){
+        double num1=parameter;
+        double num2=1/Math.exp(parameter);
+        double num3=Math.sqrt(1-(1/Math.exp(parameter)));
+        double result=multAdd(num1,num2,num3);
+        return result;
+    }
 }
